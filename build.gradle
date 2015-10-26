@@ -27,7 +27,6 @@ dependencies {
 
 //    compile 'org.springframework:spring-context:4.2.2.RELEASE'
 //    compile("org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE")
-    compile 'org.apache.thrift:libthrift:0.9.1'
     compile project(':core')
     compile 'commons-lang:commons-lang:2.6'
 }

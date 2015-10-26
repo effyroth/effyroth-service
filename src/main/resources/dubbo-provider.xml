@@ -10,10 +10,11 @@
 
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" client="zkclient"/>
 
-    <dubbo:protocol id="thrift" name="thrift" />
-
     <bean id="testService" class="com.effyroth.service.services.impl.TestServiceImpl"/>
 
-    <dubbo:service protocol="thrift" interface="com.effyroth.core.services.TestService$Iface" ref="testService" timeout="10000"/>
+    <dubbo:service interface="com.effyroth.core.services.TestService" ref="testService"/>
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20880" />
 
 </beans>
